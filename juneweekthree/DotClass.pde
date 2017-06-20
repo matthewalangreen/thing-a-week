@@ -1,6 +1,19 @@
 class Dot {
   
-  // Data
+  // Class Data
+  float[] deathRates = {.1,.2,.3,.4,.5,.6,.7,.8,.9,1,1.1,1.2,1.1,1,.9,.8,.7,.6,.5,.4,.3,.2,.1};
+  int deathRatesIndex = 0;
+  
+  // Class methods
+  float nextDeathRate() {
+    deathRatesIndex++;
+    if(deathRatesIndex > deathRates.length) {
+      deathRatesIndex = 0;
+    }
+    return deathRates[deathRatesIndex];
+  }
+  
+  // Object Data
   PVector location;
   PVector velocity;
   PVector acceleration;
@@ -11,16 +24,21 @@ class Dot {
   float deathRate;
   int counter;
   boolean growing;
+  
 
   // Constructor
   Dot(float _firstX, float _firstY, color _dotColor) {
     
     // ********************************** CHANGE THESE AS NEEDED *************************
-    maxSpeed = 16;  // 7 is default
-    maxForce = 1.2; // 0.4 is default
-    deathRate = 1.5; // 0.8 is default
+    maxSpeed = 5;  // 16 is default
+    maxForce = 1.2; // 1.2 is default
+    //deathRate = .8; // 0.8 is default
+    //deathRate = random(0.2,0.8);  // random
+    //deathRate = (0.2*sin(random(0,2*PI))+0.8); osccilating death rates:  
+    deathRate = nextDeathRate();
     radiusChange = 0.1; // 0.04 is default
     lifespan = random(150,400); //100,255 is default
+    //lifespan = 200;
     // ***********************************************************************************
     
     acceleration = new PVector(0, 0);

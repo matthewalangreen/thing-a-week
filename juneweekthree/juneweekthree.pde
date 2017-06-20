@@ -20,40 +20,61 @@ float[] aVals = {0.4,0.35,0.2,0.5,4,0.6,0.75,1.4,2,3};
 PolarGraph myGraph = new PolarGraph();
 int numPairs = 0; // to keep track of size of coordinates array in myGraph
 float tempX,tempY; // same as above
+float currentAVal;
 
 boolean moving = true;
 int aValsIndex = 0;  // used to keep track of where we are in the aVals[] array
 
 boolean makeNew = false;
+boolean looping = true;
 void setup()
 {
   ellipseMode(CENTER);
   size(600, 600);
   noStroke();
   frameRate(24); // 100 is default
-  myGraph.calculateValuePairs(aVals[0]); // calculate locations on first curve
+  currentAVal = aVals[1];
+  myGraph.calculateValuePairs(currentAVal); // calculate locations on first curve
   
   location = new PVector(random(width),random(height));
 }
 
 void keyPressed()
 {
+  if(key =='l') {
+    
+    if(looping) {
+      noLoop();
+    } else {
+      loop();
+    }
+    looping = !looping;
+  }
+  if(key =='c') {
+    dots.clear();
+    makeDot();
+  }
   if(key =='a') {
-   makeDots(1000); 
+   makeDots(1); 
+  }
+  if(key =='b') {
+    makeDots(100);
   }
   if(key =='m') {
    moving = !moving; 
   }
   if(key == 'v') {
     int t = (int)random(0,aVals.length-1);
-    myGraph.calculateValuePairs(aVals[t]);
+    currentAVal = aVals[t];
+    myGraph.calculateValuePairs(currentAVal);
   }
 } 
 
 void draw()
 {
+  println("Current Curve a Value: "+currentAVal);
   if(makeNew) {
-   makeDots(2);
+   makeDots(8);
    makeNew = false;
   }
   background(0);
