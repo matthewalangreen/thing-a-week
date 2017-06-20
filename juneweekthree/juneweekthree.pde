@@ -74,7 +74,7 @@ void draw()
 {
   println("Current Curve a Value: "+currentAVal);
   if(makeNew) {
-   makeDots(8);
+   makeDots(10);
    makeNew = false;
   }
   background(0);

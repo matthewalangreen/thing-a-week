@@ -1,7 +1,7 @@
 class Dot {
   
   // Class Data
-  float[] deathRates = {.1,.2,.3,.4,.5,.6,.7,.8,.9,1,1.1,1.2,1.1,1,.9,.8,.7,.6,.5,.4,.3,.2,.1};
+  float[] deathRates = {1.2,1.1,1,.9,.8,.7,.6,.5,.4,.3,.2,.1,.1,.2,.3,.4,.5,.6,.7,.8,.9,1,1.1,1.2};
   int deathRatesIndex = 0;
   
   // Class methods
@@ -32,10 +32,10 @@ class Dot {
     // ********************************** CHANGE THESE AS NEEDED *************************
     maxSpeed = 5;  // 16 is default
     maxForce = 1.2; // 1.2 is default
-    //deathRate = .8; // 0.8 is default
-    //deathRate = random(0.2,0.8);  // random
+    //deathRate = .4; // 0.8 is default
+    deathRate = random(0.1,.4);  // random
     //deathRate = (0.2*sin(random(0,2*PI))+0.8); osccilating death rates:  
-    deathRate = nextDeathRate();
+    //deathRate = nextDeathRate();
     radiusChange = 0.1; // 0.04 is default
     lifespan = random(150,400); //100,255 is default
     //lifespan = 200;
