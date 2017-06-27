@@ -33,7 +33,7 @@ class Dot {
     maxSpeed = 5;  // 16 is default
     maxForce = 1.2; // 1.2 is default
     //deathRate = .4; // 0.8 is default
-    deathRate = random(0.1,.4);  // random
+    deathRate = random(.2,.5);  // random
     //deathRate = (0.2*sin(random(0,2*PI))+0.8); osccilating death rates:  
     //deathRate = nextDeathRate();
     radiusChange = 0.1; // 0.04 is default
@@ -45,7 +45,7 @@ class Dot {
     velocity = new PVector(0, 0);
     location = new PVector(_firstX, _firstY);
     newLocation = location;
-    radius = random(10,20); 
+    radius = random(10,28); 
     dotColor = _dotColor;
     firstX = _firstX;
     firstY = _firstY;

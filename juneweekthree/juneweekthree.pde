@@ -33,7 +33,7 @@ void setup()
   size(600, 600);
   noStroke();
   frameRate(24); // 100 is default
-  currentAVal = aVals[1];
+  currentAVal = aVals[7];
   myGraph.calculateValuePairs(currentAVal); // calculate locations on first curve
   
   location = new PVector(random(width),random(height));
@@ -60,6 +60,9 @@ void keyPressed()
   if(key =='b') {
     makeDots(100);
   }
+  if(key == 't') {
+     makeDots(2500); 
+  }
   if(key =='m') {
    moving = !moving; 
   }
@@ -74,7 +77,7 @@ void draw()
 {
   println("Current Curve a Value: "+currentAVal);
   if(makeNew) {
-   makeDots(10);
+   //makeDots(2);
    makeNew = false;
   }
   background(0);
