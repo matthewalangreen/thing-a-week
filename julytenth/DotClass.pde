@@ -41,7 +41,7 @@ class Dot {
     deathRate = 0.5;
     radiusChange = 0.02; // 0.04 is default
     //lifespan = 200; //100,255 is default
-    lifespan = random(50, 800);
+    lifespan = random(50, 500);
     //lifespan =200;
     // ***********************************************************************************
     

@@ -104,7 +104,7 @@ void draw()
    //makeDots(2);
    makeNew = false;
   }
-  background(0);
+  background(246);
   
   numPairs = myGraph.valuePairsSize(); // keep track of how many coordinate pairs their are for error checking
   
