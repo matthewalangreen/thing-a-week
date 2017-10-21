@@ -10,24 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2796,         94]
-NotebookOptionsPosition[      2468,         77]
-NotebookOutlinePosition[      2826,         93]
-CellTagsIndexPosition[      2783,         90]
+NotebookDataLength[      2599,         88]
+NotebookOptionsPosition[      2273,         71]
+NotebookOutlinePosition[      2630,         87]
+CellTagsIndexPosition[      2587,         84]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"TextWords", "[", 
-    RowBox[{
-    "Import", "[", "\"\<http://www.papert.org/articles/HardFun.html\>\"", 
-     "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+Cell[BoxData[
  RowBox[{"CloudDeploy", "[", 
   RowBox[{
    RowBox[{"APIFunction", "[", 
@@ -40,8 +33,9 @@ Cell[BoxData[{
         RowBox[{"TextWords", "[", 
          RowBox[{"Import", "[", "#x", "]"}], "]"}], ",", "\"\<XML\>\""}], 
        "]"}], "&"}]}], "]"}], ",", 
-   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.7094693880676603`*^9, 3.709469464457971*^9}}],
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7094693880676603`*^9, 3.709469464457971*^9}, {
+  3.7143900391403*^9, 3.714390040785906*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -75,8 +69,8 @@ fbd415ea7581", "Hyperlink"]& ], "]"}],
    3.709469466333395*^9}]
 }, Open  ]]
 },
-WindowSize->{840, 1001},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{960, 988},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -93,8 +87,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 787, 21, 117, "Input"],
-Cell[1370, 45, 1082, 29, 69, "Output"]
+Cell[580, 22, 592, 15, 54, "Input"],
+Cell[1175, 39, 1082, 29, 35, "Output"]
 }, Open  ]]
 }
 ]

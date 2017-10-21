@@ -8,11 +8,11 @@ void mousePressed() {
 }
 
 void setup() {
-  size(600,600);
+  size(800,800);
   //fullScreen();
   background(246);
   
-  frameRate(8); // slow it down!
+  frameRate(15); // slow it down!
   textAlign(CENTER);
   
 // get data from WL API
@@ -20,6 +20,7 @@ String WLURL = "https://www.wolframcloud.com/objects/2224626a-3f76-4694-acfa-fbd
 String source = "http://www.papert.org/articles/HardFun.html"; // allows me to change the source later as needed
 String[] lines = loadStrings(WLURL + source);
 String textString = join(lines,"");
+println(textString);
 
 // Parse data
 String[] lines2 = split(textString,"&quot;");
@@ -40,7 +41,7 @@ words = split(textString,",");
 
 // Debugging
 //println(textString);
-println(textString);
+//println(textString);
 }
 
 // paint with data
